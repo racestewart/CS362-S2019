@@ -16,7 +16,7 @@ int main() {
   printf("Card Test 1: Smithy\n");
 
   memcpy(&G2, &G, sizeof(struct gameState));
-  smithyFunction(&G2, 0);
+  Smithy(whoseTurn(&G2), &G2, 0);
 
   if((G2.handCount[G2.whoseTurn] - 1) == G.handCount[G2.whoseTurn]) {
     printf("Passed: hand count correct\n");
