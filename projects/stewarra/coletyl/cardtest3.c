@@ -7,10 +7,11 @@
 
 int main() {
   struct gameState G;
+  int handPos = 0;
 
   printf("Card Test 3: Outpost\n");
 
-  cardEffect(outpost, 0, 0, 0, &G, 0, 0);
+  Outpost(whoseTurn(&G), &G, handPos);
 
   if(G.outpostPlayed == 1){
     printf("Passed: outpost played\n");
