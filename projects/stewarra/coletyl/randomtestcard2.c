@@ -24,10 +24,12 @@ int main() {
     initializeGame(numPlayers, k, seed, &G);
 
     memcpy(&test, %G, sizeof(struct gameState));
-
-    ghFunction(&G, handpos)
-
+    
     player = whoseTurn(&test);
+
+    Great_Hall(player, &G, handpos)
+
+    
 
     // check hand count
     if(G.hand[player][test.handCount[player] - 1] != -1) {
