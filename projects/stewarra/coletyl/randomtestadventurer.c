@@ -24,10 +24,12 @@ int main() {
     initializeGame(numPlayers, k, seed, &G);
 
     memcpy(&test, %G, sizeof(struct gameState));
-
-    Adventurer(handpos, &G)
-
+    
     player = whoseTurn(&test);
+
+    Adventurer(player, &G)
+
+    
 
     // hand count accuracy
     if(test.handCount[player] - 1 == G.handCount[player]) {
