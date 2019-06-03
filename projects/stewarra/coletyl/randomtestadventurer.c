@@ -25,7 +25,7 @@ int main() {
 
     memcpy(&test, %G, sizeof(struct gameState));
 
-    adventurerFunction(&G, handpos)
+    Adventurer(handpos, &G)
 
     player = whoseTurn(&test);
 
