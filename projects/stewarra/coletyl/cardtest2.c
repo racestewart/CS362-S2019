@@ -27,12 +27,12 @@ int main() {
   memcpy(&G2, &G, sizeof(struct gameState));
   G2.hand[G2.whoseTurn][0] = minion;
 
-  adventurerFunction(&G2, 0);
+  Adventurer(whoseTurn(&G2), &G2);
   printf("Expected: %d, Actual: %d\n", G.handCount[G.whoseTurn] + 2, G2.handCount[G2.whoseTurn]);
 
   G.discardCount[G.whoseTurn] = 5;
   memcpy(&G2, &G, sizeof(struct gameState));
-  adventurerFunction(&G2, 0);
+  Adventurer(whoseTurn(&G2), &G2);
 
   while(j < 2) {
     drawCard(G.whoseTurn, &G);
